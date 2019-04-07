@@ -18,7 +18,7 @@ some attention. PRs are very much welcome.
 
 - `yarn global add neon-cli` (if you haven't already)
 - `neon build` (make sure you have Rust first)
-- cd benchmarks
+- `cd benchmarks`
 - `npm install` or `yarn`
 - `node node-js.js`
 - `node node-rust.js`
