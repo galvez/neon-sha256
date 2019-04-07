@@ -14,6 +14,10 @@ implementation of its crypto module. It did use a lot fewer memory though. My
 suspicion is that there's a cost to FFI, but my Rust code can probably use 
 some attention. PRs are very much welcome.
 
+Rust, as expected, did outperform the highly optimized JavaScript of `crypto-js`
+by nearly 200%, while using roughly 1/3 of the memory. For server-side code,
+using Rust modules in JavaScript is likely to yield substantial savings.
+
 ## Running the benchmark
 
 - `yarn global add neon-cli` (if you haven't already)
