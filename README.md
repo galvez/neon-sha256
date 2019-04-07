@@ -16,7 +16,7 @@ some attention. PRs are very much welcome.
 
 ## Running the benchmark
 
-- `yarn add global neon-cli` (if you haven't already)
+- `yarn global add neon-cli` (if you haven't already)
 - `neon build` (make sure you have Rust first)
 - cd benchmarks
 - `npm install` or `yarn`
