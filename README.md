@@ -10,8 +10,9 @@ current results are:
 
 Which suggests Rust can be significantly faster than pure JavaScript, but 
 at least with my test project, not fast enough to beat Node's own native
-implementation of its crypto module. My suspicion is that there's a cost to 
-FFI, but my Rust code can probably use some attention. PRs welcome.
+implementation of its crypto module. It did use a lot fewer memory though. My 
+suspicion is that there's a cost to FFI, but my Rust code can probably use 
+some attention. PRs are very much welcome.
 
 ## Running the benchmark
 
