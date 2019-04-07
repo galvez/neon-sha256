@@ -1,4 +1,4 @@
-const { strToSHA256Hex } = require('../native')
+const { strToSHA256Hex } = require('../lib')
 const { payload, benchmarkFunc } = require('./setup')
 
 benchmarkFunc('Native (Rust) Node module', () => {
