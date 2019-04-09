@@ -18,6 +18,30 @@ Rust, as expected, did outperform the highly optimized JavaScript of `crypto-js`
 by nearly 200%, while using roughly 1/3 of the memory. For server-side code,
 using Rust modules in JavaScript is likely to yield substantial savings.
 
+## Update (Apr 9 2019)
+
+Thanks to @kjvalencik for pointing out that there is a [cost to FFI][cf] making Rust 
+slower on smaller strings. Dropping iterations to `100000` and increasing the size of
+the payload to about 20kb will cause Rust to outperform the built-in Node module.
+
+[cf]: https://github.com/dyu/ffi-overhead
+
+```js
+payload = Buffer.alloc(20000).fill(' ').toString()
+```
+
+```
+Native (Rust) Node module: 7.337s/5.72 MB
+Native (C) Node module: 7.427s/5.08 MB
+```
+
+The gap widening at 50kb:
+
+```
+Native (Rust) Node module: 17.556s/4.82 MB
+Native (C) Node module: 19.671s/5.14 MB
+```
+
 ## Running the benchmark
 
 - `yarn global add neon-cli` (if you haven't already)
