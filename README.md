@@ -21,8 +21,8 @@ using Rust modules in JavaScript is likely to yield substantial savings.
 ## Update (Apr 9 2019)
 
 Thanks to @kjvalencik for pointing out that there is a [cost to FFI][cf] making Rust 
-slower on smaller strings. Dropping iterations to `100000` and increasing the size of
-the payload to about 20kb will cause Rust to outperform the built-in Node module.
+slower on smaller strings. Rust will start outperforming the built-in Node module
+as you increase the size of the payload past 20kb.
 
 [cf]: https://github.com/dyu/ffi-overhead
 
